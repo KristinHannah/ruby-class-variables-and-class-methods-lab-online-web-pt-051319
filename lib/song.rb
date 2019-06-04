@@ -31,6 +31,7 @@ class Song
       @@genres.each do |gen|
         counts[gen] += 1 
       end 
+      return counts 
   end 
   
   def name 
