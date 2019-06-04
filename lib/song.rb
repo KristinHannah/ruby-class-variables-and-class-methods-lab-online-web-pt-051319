@@ -27,17 +27,10 @@ class Song
   end 
   
   def self.genre_count 
-    hash = {}
-    num = 0  
-    @@genres.sort
-    i = 0
-    while i < @@genres.length 
-        genre = @@genres[i] 
-        num += 1 
-        hash[genre] = num 
-        i += 1 
+      counts = Hash.new 0 
+      @@genres.each do |gen|
+        counts[gen] += 1 
       end 
-      return hash 
   end 
   
   def name 
